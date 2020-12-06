@@ -10,7 +10,7 @@ div.header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0;
-  padding: 4em 0;
+  padding: 6em 0;
 }
 div.header h2 {
   font-size: 1.2em;
