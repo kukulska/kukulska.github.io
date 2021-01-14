@@ -6,7 +6,7 @@ body {
 }
 
 div.header {
-  background-color: #d5dadec4;
+  background-color: rgba(68, 76, 83, 0.08);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0;
@@ -64,7 +64,6 @@ div.project-description a {
   color: rgb(68, 76, 83);
   text-decoration: none;
   background-color: rgba(68, 76, 83, 0.08);
-  /* border-bottom: 3px solid rgba(68, 76, 83, 0.5); */
 }
 
 footer {
