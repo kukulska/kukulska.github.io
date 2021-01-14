@@ -81,8 +81,8 @@ footer a {
   }
 
   section.project {
-  margin: 4em 0;
-}
+    margin: 4em 0;
+  }
   div.project-description p {
     font-size: 0.9em;
   }
@@ -126,6 +126,6 @@ footer a {
 
 @media (max-width: 415px) {
   body {
-    /* margin: 15em 0 0 0;
-  } */
+    margin: 15em 0 0 0;
+  }
 }
