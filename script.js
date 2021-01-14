@@ -12,6 +12,10 @@ const images = {
     bw: "./img/Hangman_BW.jpg",
     color: "./img/Hangman.jpg",
   },
+  JS4D: {
+    bw: "./img/JS4D_BW.jpg",
+    color: "./img/JS4D.jpg",
+  },
 };
 
 //images change color when they are in the middle of the Viewport
@@ -45,3 +49,32 @@ document.addEventListener("scroll", function () {
 });
 
 changeImageColor();
+
+//Header color change
+
+const headerTag = document.querySelector("div.header");
+
+function toggleHeader() {
+  const pixels = window.pageYOffset;
+
+  if (pixels > 64) {
+    headerTag.classList.add("scrolled");
+  } else {
+    headerTag.classList.remove("scrolled");
+  }
+}
+
+function fadeBox() {
+  const pixels = window.pageYOffset;
+  const alpha = Math.min(pixels / 200, 0.25);
+
+  headerTag.style.boxShadow = ` 0 0 1em rgba(0, 0, 0, ${alpha})`;
+}
+
+document.addEventListener("scroll", function () {
+  toggleHeader();
+  fadeBox();
+});
+
+toggleHeader();
+fadeBox();

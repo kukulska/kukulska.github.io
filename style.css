@@ -6,7 +6,7 @@ body {
 }
 
 div.header {
-  background: rgb(223, 230, 238);
+  background-color: #d5dadec4;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: 0;
@@ -14,7 +14,13 @@ div.header {
   position: fixed;
   top: 0;
   left: 0;
+  transition: background-color 1s;
 }
+
+div.header.scrolled {
+  background-color: #ffffff;
+}
+
 div.header h2 {
   font-size: 1.1em;
   font-weight: 400;
@@ -55,8 +61,10 @@ div.project-description p {
 }
 
 div.project-description a {
-  color: rgb(0, 97, 207);
+  color: rgb(68, 76, 83);
   text-decoration: none;
+  background-color: rgba(68, 76, 83, 0.08);
+  /* border-bottom: 3px solid rgba(68, 76, 83, 0.5); */
 }
 
 footer {
