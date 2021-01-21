@@ -16,6 +16,10 @@ const images = {
     bw: "./img/JS4D_BW.jpg",
     color: "./img/JS4D.jpg",
   },
+  LostInTokyo: {
+    bw: "./img/LostInTokyo_BW.jpg",
+    color: "./img/LostInTokyo.jpg",
+  },
 };
 
 //images change color when they are in the middle of the Viewport
