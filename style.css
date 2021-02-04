@@ -74,6 +74,7 @@ ul.side-bar {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 0;
 }
 
 ul.side-bar li a {
@@ -168,6 +169,10 @@ footer a {
     margin: 192px 0 0 0;
   }
 
+  ul.side-bar {
+    margin: -250px 0 0 0;
+  }
+
   div.landing {
     margin: 300px 0 0 0;
     height: 60vh;
@@ -178,17 +183,32 @@ footer a {
   div.header-contact h1 {
     font-size: 3em;
     text-align: center;
-    margin: 150px 0 0 0;
+    margin: 120px 0 0 0;
     padding: 0;
   }
 
-  div.header h2,
+  div.header h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
   div.header-about h2,
   div.header-contact h2 {
     font-size: 1.2em;
     font-weight: 400;
     text-align: center;
     margin: 0;
+    padding: 1.5em;
+    max-width: 100%;
+  }
+
+  div.header-contact ul {
+    font-size: 1em;
+    list-style: none;
+    text-align: center;
     padding: 0;
   }
 
