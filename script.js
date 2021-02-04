@@ -58,31 +58,17 @@ document.addEventListener("scroll", function () {
 
 changeImageColor();
 
-//Header color change
+// when we scroll the page, make a progress bar that track of the distance
 
-const headerTag = document.querySelector("div.header");
-
-function toggleHeader() {
-  const pixels = window.pageYOffset;
-
-  if (pixels > 64) {
-    headerTag.classList.add("scrolled");
-  } else {
-    headerTag.classList.remove("scrolled");
-  }
-}
-
-function fadeBox() {
-  const pixels = window.pageYOffset;
-  const alpha = Math.min(pixels / 200, 0.25);
-
-  headerTag.style.boxShadow = ` 0 0 1em rgba(0, 0, 0, ${alpha})`;
-}
+const bodyTag = document.querySelector("body");
+const progressTag = document.querySelector("div.progress");
 
 document.addEventListener("scroll", function () {
-  toggleHeader();
-  fadeBox();
-});
+  const pixels = window.pageYOffset;
+  const pageHeight = bodyTag.getBoundingClientRect().height;
+  const totalScrollableDistance = pageHeight - window.innerHeight;
 
-toggleHeader();
-fadeBox();
+  const percentage = pixels / totalScrollableDistance;
+
+  progressTag.style.width = `${100 * percentage}%`;
+});

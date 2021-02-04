@@ -1,42 +1,117 @@
-body {
-  color: rgb(68, 76, 83);
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  margin: 272px 0 0 0;
+:root {
+  --off-black: rgb(68, 76, 83);
 }
 
-div.header {
-  background-color: rgba(68, 76, 83, 0.08);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+body {
+  color: var(--off-black);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   margin: 0;
-  padding: 32px 0;
+}
+
+div.progress {
   position: fixed;
   top: 0;
   left: 0;
-  transition: background-color 1s;
+  width: 0%;
+  height: 5px;
+  background-color: var(--off-black);
+  z-index: 1;
+  transition: background-color 0.5s;
 }
 
-div.header.scrolled {
-  background-color: #ffffff;
+div.landing {
+  margin: 300px 0 0 0;
+  height: 100vh;
 }
 
-div.header h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+div.header h1,
+div.header-about h1,
+div.header-contact h1 {
+  font-size: 5em;
+  font-weight: 600;
   text-align: justify;
   grid-column: 3 / span 3;
+  margin: 200px 0 0 0;
+  padding: 0 0 0 4em;
+}
+
+div.header h2,
+div.header-about h2,
+div.header-contact h2 {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: justify;
+  grid-column: 3 / span 6;
   margin: 0;
+  padding: 0 0 0 10em;
+}
+
+div.header-about h2,
+div.header-contact h2 {
+  max-width: 800px;
+  font-size: 1.6em;
+  padding: 0 0 0 12.5em;
+}
+
+div.header-contact ul {
+  font-size: 1em;
+  padding: 2em 0 0 20em;
+  max-width: 1000px;
+  list-style: none;
+}
+
+div.header-contact ul li {
+  padding: 0.5em 0;
+}
+
+ul.side-bar {
+  font-weight: 500;
+  list-style: none;
+  margin: -200px 0 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul.side-bar li a {
+  color: var(--off-black);
+  text-decoration: none;
+  cursor: url("./img/dot.png") 10 10, auto;
+}
+
+ul.side-bar li.selected {
+  border-bottom: 2px var(--off-black) solid;
+}
+
+div.section-description {
+  background-color: rgba(68, 76, 83, 0.03);
+}
+
+div.section-description h3 {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 0 auto 4em;
+  padding: 6em;
+  color: rgba(68, 76, 83, 0.4);
 }
 
 section.project {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 7em 0;
+  margin: 10em 0;
+}
+
+div.section-1 div.section-description {
+  grid-column: 3 / span 3;
 }
 
 section.project a {
+  cursor: url("./img/dot.png") 10 10, auto;
   grid-column: 3 / span 3;
 }
 
@@ -57,14 +132,16 @@ div.project-description h3 {
 }
 
 div.project-description p {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.1em;
   font-weight: 300;
   text-align: justify;
 }
 
-div.project-description a {
-  color: rgb(68, 76, 83);
+div.project-description a,
+div.header-about h2 a,
+div.header-contact ul li a {
+  cursor: url("./img/dot.png") 10 10, auto;
+  color: var(--off-black);
   text-decoration: none;
   background-color: rgba(68, 76, 83, 0.08);
 }
@@ -91,9 +168,38 @@ footer a {
     margin: 192px 0 0 0;
   }
 
-  div.header h2 {
-    font-size: 1em;
-    grid-column: 3 / span 8;
+  div.landing {
+    margin: 300px 0 0 0;
+    height: 60vh;
+  }
+
+  div.header h1,
+  div.header-about h1,
+  div.header-contact h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 150px 0 0 0;
+    padding: 0;
+  }
+
+  div.header h2,
+  div.header-about h2,
+  div.header-contact h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  div.section-description h3 {
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 auto 4em;
+    padding: 4em;
+    color: rgba(68, 76, 83, 0.4);
   }
 
   section.project {
