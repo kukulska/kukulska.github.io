@@ -98,6 +98,17 @@ ul.side-bar li.selected {
   border-bottom: 2px var(--off-black) solid;
 }
 
+div.arrow img {
+  display: block;
+  text-align: center;
+  margin: 15% auto 0;
+  max-width: 35px;
+}
+
+div.arrow img:hover {
+  cursor: url("./img/dot.png") 10 10, auto;
+}
+
 div.section-description {
   background-color: rgba(68, 76, 83, 0.03);
 }

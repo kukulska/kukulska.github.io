@@ -14,7 +14,7 @@ function changeImageColor() {
 
     const image = section.querySelector("a img");
 
-    if (distanceToSection < section.offsetHeight / 2) {
+    if (distanceToSection < section.offsetHeight / 1.2) {
       image.classList.add("color");
     } else {
       image.classList.remove("color");
@@ -79,3 +79,12 @@ window.addEventListener("resize", function () {
 });
 
 fadeIn();
+
+// When arrow is clicked, scroll down to teh first section
+
+const arrow = document.getElementById("arrow");
+const sectionDescription = document.getElementById("section-description");
+
+arrow.addEventListener("click", () => {
+  sectionDescription.scrollIntoView({ behavior: "smooth" });
+});
