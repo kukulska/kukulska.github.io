@@ -191,6 +191,7 @@ footer a {
   color: rgb(68, 76, 83);
   font-size: 1.6em;
   margin: 0 0.2em;
+  cursor: url("./img/dot.png") 10 10, auto;
 }
 
 @media (max-width: 1280px) {
