@@ -229,6 +229,11 @@ footer a {
   div.project-description p {
     font-size: 0.9em;
   }
+
+  div.header-about h2 {
+    margin: 0;
+    padding: 0 5em 0 12.5em;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -268,7 +273,7 @@ footer a {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    padding: 1.5em;
+    padding: 2em;
     max-width: 100%;
   }
 
