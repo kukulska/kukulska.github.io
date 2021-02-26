@@ -80,6 +80,51 @@ window.addEventListener("resize", function () {
 
 fadeIn();
 
+//ring following cursor
+const ring = document.getElementById("ring");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let ringX = 0;
+let ringY = 0;
+
+let speed = 0.08;
+
+function animate() {
+  let distanceX = mouseX - ringX;
+  let distanceY = mouseY - ringY;
+
+  ringX = ringX + distanceX * speed;
+  ringY = ringY + distanceY * speed;
+
+  ring.style.left = ringX + "px";
+  ring.style.top = ringY + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+document.addEventListener("mousemove", (event) => {
+  mouseX = event.pageX;
+  mouseY = event.pageY;
+});
+
+// ring changes size on mouse over links
+
+const links = document.querySelectorAll("a, img#arrow");
+
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    ring.classList.add("hovered");
+  });
+
+  link.addEventListener("mouseleave", () => {
+    ring.classList.remove("hovered");
+  });
+});
+
 // When arrow is clicked, scroll down to teh first section
 
 const arrow = document.getElementById("arrow");
