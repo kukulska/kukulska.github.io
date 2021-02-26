@@ -332,6 +332,10 @@ footer a {
 }
 
 @media (max-width: 768px) {
+  div.ring {
+    display: none;
+  }
+
   div.header h2 {
     font-size: 0.9em;
     grid-column: 3 / span 8;
