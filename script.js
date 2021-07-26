@@ -29,7 +29,7 @@ document.addEventListener("scroll", function () {
 
 changeImageColor();
 
-// when we scroll the page, make a progress bar that track of the distance
+// page tracking scroll progress bar
 
 const bodyTag = document.querySelector("body");
 const progressTag = document.querySelector("div.progress");
