@@ -69,7 +69,7 @@ div.header-about h2,
 div.header-contact h2 {
   font-size: 2em;
   font-weight: 400;
-  text-align: justify;
+  text-align: left;
   grid-column: 3 / span 6;
   margin: 0;
   padding: 0 0 0 10em;
@@ -140,6 +140,7 @@ div.section-description h3 {
   margin: 0 auto 4em;
   padding: 6em;
   color: rgba(68, 76, 83, 0.4);
+  color: var(--off-black);
 }
 
 section.project {
@@ -204,7 +205,8 @@ div.project-description h3 {
 div.project-description p {
   font-size: 1.1em;
   font-weight: 300;
-  text-align: justify;
+  text-align: left;
+  max-width: 700px;
 }
 
 div.project-description a,
